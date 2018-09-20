@@ -1,3 +1,18 @@
+* {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'IBM Plex Serif', serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background:#eeeeee;
+}
+
+
 /* Lets pick colours! */
 
 :root {
@@ -10,9 +25,69 @@
 body, html {
   color: var(--text-color);
   background-color: var(--bg-color);
-
   /*Declare your font*/
   font-family: serif;
+
+}
+
+
+.articles {
+  display:flex;
+  flex-direction:row;
+  flex:1;
+  justify-content: space-between;
+  max-height: 150px;
+}
+
+.articles__item {
+  display:flex;
+  flex:1;
+  margin:5px;
+  padding:5px;
+  flex-direction:column;
+  justify-content: center;
+}
+
+.articles__text {
+  text-align: center;
+  font-family: 'IBM Plex Serif', serif;
+
+
+}
+
+.hire-me {
+  display:flex;
+  justify-content: center;
+  background: grey;
+  font-family: LKFonda,Arial,Sans-serif;
+}
+
+header {
+  min-height: 100px;
+  padding:20px;
+  font-size: 2em;
+  background: rgb(216, 100, 100);
+  font-family: 'Rufina', serif;
+}
+
+.content__block {
+  margin-bottom : 40px;
+}
+
+
+
+.header__surname {
+  transform: rotate(90deg) translate(0,20px);
+  font-size:.5em;
+}
+
+img {
+  width: 100%;
+  height: 100px
+}
+
+.desktop {
+  display:none;
 }
 
 /*choose your type heirarchy*/
@@ -30,43 +105,23 @@ a {color: var(--link-color)}
 .container {
   display: flex;
   margin: 0 auto;
-  max-width: 50rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  background: rgb(216, 100, 100)
 }
 
-.col-1 {
-  flex-grow: 2;
-  flex-shrink: 2;
-  flex-basis: 66%;
-}
+.content {
+  margin: 30px;
+  font-family: 'IBM Plex Serif', serif;
 
-.col-2 {
-  flex-grow: 1;
-  flex-shrink: 2;
-  flex-basis: 33%;
 }
 
 
-/*Header*/
 
-header .container {
-  padding-bottom: 2rem;
-  border-bottom: 2px solid black;
+@media (min-width: 960px) {
+
+
+.desktop {
+  display: inline-block;
 }
 
-/*content*/
-
-.bio {flex-direction: column;}
-.bio p, .bio ul li {margin-bottom: 1rem;}
-
-ul.jobs li {
-  padding-right: 2rem;
-  margin-bottom: 2rem;
-}
-
-/*footer*/
-footer .container {
-  padding: 2rem 0;
-  border-top: 2px solid black;
 }
